@@ -1,2 +1,2 @@
 # AIC-DePin
-Enhance decentralized infrastructure for AI.
+Enhance decentralized infrastructure for AI. 
