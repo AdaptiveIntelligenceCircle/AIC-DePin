@@ -1,8 +1,28 @@
-#pragma once 
+#pragma once
 
-class BootstrapStrategy
+#include <vector>
+#include "node_identity.h"
+
+using namespace std;
+
+namespace aic ::network ::discovery
 {
-    public: 
-    virtual void bootstrap() = 0; 
-    virtual ~BootstrapStrategy() = default; 
-}; 
+    class BootstrapStrategy
+    {
+    public:
+        virtual ~BootstrapStrategy() = default;
+
+        virtual vector<NodeIdentity> initialPeers() = 0;
+    };
+
+    class StaticBootstrap : public BootstrapStrategy
+    {
+    public:
+        explicit StaticBootstrap(vector<NodeIdentity> seeds);
+
+        vector<NodeIdentity> initialPeers() override;
+
+    private:
+        vector<NodeIdentity> seeds_;
+    };
+}
