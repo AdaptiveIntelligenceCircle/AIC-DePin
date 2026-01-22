@@ -7,4 +7,3 @@ Colluding nodes exhibit:
 
 Key trait:
 No single node appears malicious in isolation.
-s
