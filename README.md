@@ -6,7 +6,7 @@ Enhance decentralized infrastructure for AI.
 </p>
 
 <p align="center">
-  <strong> Human Meaning Network </strong><br>
+  <strong> AIC-DePin </strong><br>
   Decentralized nodes • Ethical scaling • Planetary readiness
 </p>
 
