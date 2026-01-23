@@ -1,7 +1,14 @@
 # AIC-DePin
 Enhance decentralized infrastructure for AI. 
 
-![alt text](AIC-DePin.png)
+<p align="center">
+  <img src="assets/AIC-DePin.png" alt="AIC Logo" width="1024" length = "1024"/>
+</p>
+
+<p align="center">
+  <strong> Human Meaning Network </strong><br>
+  Decentralized nodes • Ethical scaling • Planetary readiness
+</p>
 
 ## Phase 2: Core Architecture & Execution Layer
 
