@@ -2,10 +2,28 @@
 #include "node_identity.h"
 using namespace std; 
 
-class DiscoveryService
+#include "peer_registry.h"
+#include "bootstrap_strategy.h"
+#include <memory>
+
+namespace aic :: network :: discovery
 {
-    public: 
-    void announce(); 
-    void listen(); 
-    void probe_node(const NodeIdentity& candidate);  
-}; 
+    class DiscoveryService
+    {
+        public: 
+        explicit DiscoveryService(
+            unique_ptr<BootstrapStrategy> bootstrap
+        ); 
+
+        void start(); 
+
+        void discoveredFromPeer(const NodeIdentity&peer); 
+        void heartbeat(const string &node_id); 
+
+        PeerRegistry &registry(); 
+
+        private: 
+        PeerRegistry registry_; 
+        unique_ptr<BootstrapStrategy> bootstrap_; 
+    }; 
+}
