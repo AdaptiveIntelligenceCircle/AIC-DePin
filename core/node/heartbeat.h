@@ -9,6 +9,7 @@ namespace aic :: core ::node
         public:
         HeartBeat() = default;
         ~HeartBeat() = default;  
+        HeartBeat(const string &node_id); 
 
         void emit();
         bool verify();
@@ -18,5 +19,10 @@ namespace aic :: core ::node
 
         bool isAlive(double timeout) const;
         double now(); 
+
+        private: 
+        string node_id_; 
+        bool alive_; 
+        uint64_t last_heartbeat_; 
     };
 }
