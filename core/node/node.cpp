@@ -1,5 +1,7 @@
 #include "node.h"
 
+using namespace aic :: node; 
+
 Node :: Node() : current_state(NodeState :: INIT){}
 
 void Node :: start()

@@ -1,8 +1,10 @@
 #pragma once 
 #include "node_state.h"
 
-class Node
+namespace aic :: node 
 {
+    class Node
+    {
     public: 
     Node(); 
 
@@ -14,4 +16,5 @@ class Node
     
     private: 
     NodeState current_state; 
-}; 
+    }; 
+}
