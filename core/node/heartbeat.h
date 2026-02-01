@@ -1,10 +1,13 @@
-#pragma once 
+#pragma once
 
 using namespace std;
 
-class HeartBeat
+namespace aic ::node
 {
-    public: 
-    void emit(); 
-    bool verify(); 
-}; 
+    class HeartBeat
+    {
+    public:
+        void emit();
+        bool verify();
+    };
+}

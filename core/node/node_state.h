@@ -1,10 +1,13 @@
-#pragma once 
+#pragma once
 
-enum class NodeState
+namespace aic ::node
 {
-    INIT, 
-    ACTIVE, 
-    DEGRADED, 
-    QUARANTINED, 
-    EXPELLED
-}; 
+    enum class NodeState
+    {
+        INIT,
+        ACTIVE,
+        DEGRADED,
+        QUARANTINED,
+        EXPELLED
+    };
+}

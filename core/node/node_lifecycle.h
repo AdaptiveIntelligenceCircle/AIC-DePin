@@ -1,14 +1,16 @@
-#pragma once 
+#pragma once
 #include "node_state.h"
 
 #include <iostream>
 using namespace std;
 
-class NodeLifeCycle
+namespace aic ::node
 {
-    public: 
-    void evaluate();
-    void degrade(); 
-    void quarantine();   
-};
-
+    class NodeLifeCycle
+    {
+    public:
+        void evaluate();
+        void degrade();
+        void quarantine();
+    };
+}
