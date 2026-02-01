@@ -1,6 +1,6 @@
 #pragma once
 
-namespace aic ::node
+namespace aic :: core ::node
 {
     enum class NodeState
     {

@@ -4,13 +4,22 @@
 #include <iostream>
 using namespace std;
 
-namespace aic ::node
+namespace aic :: core :: node
 {
     class NodeLifeCycle
     {
-    public:
+        public:
+
+        NodeLifeCycle() = default; 
+        ~NodeLifeCycle() = default; 
+        NodeLifeCycle(const string &node_id); 
+
         void evaluate();
         void degrade();
         void quarantine();
+
+        NodeState state() const; 
+        void transition(NodeState state); 
+        bool invalidTransition(NodeState from, NodeState to) const; 
     };
 }
