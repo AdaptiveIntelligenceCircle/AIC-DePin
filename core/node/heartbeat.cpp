@@ -11,6 +11,17 @@ namespace aic :: core :: node
         alive_ = true;
         last_heartbeat_ = now();  
     }
+    void HeartBeat :: emit()
+    {
+        // futhur extension.
+    }
+
+    bool HeartBeat :: verify()
+    {
+        if (!alive_) 
+        return false;
+        else true;
+    }
 
     void HeartBeat :: beat()
     {
