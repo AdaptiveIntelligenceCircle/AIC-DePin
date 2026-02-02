@@ -1,10 +1,15 @@
 #pragma once 
+#include "policy.h"
 
-#include <string>
-using namespace std;
+using namespace std; 
 
-struct Rule
+namespace aic :: core :: policy 
 {
-    string name; 
-    bool (*evaluate)(); 
-}; 
+    class NodePolicy : public Policy 
+    {
+        public: 
+        PolicyDecision evaluate(
+            const PolicyContext &context
+        ) const override; 
+    };
+}
