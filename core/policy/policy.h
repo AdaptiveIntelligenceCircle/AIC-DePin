@@ -1,15 +1,21 @@
 #pragma once 
-#include <vector> 
-#include "rule.h"
 
-using namespace std;
+#include <iostream> 
+using namespace std; 
 
-class Policy
+#include "policy_decision.h"
+#include "policy_context.h"
+
+namespace aic :: core :: policy 
 {
-    public: 
-    void add_rule(const Rule&); 
-    bool evaluate_all() const; 
+    class Policy
+    {
+        public: 
+        virtual ~Policy() = default;
 
-    private: 
-    vector<Rule> rules; 
-}; 
+        virtual PolicyDecision evaluate(
+            const PolicyContext &context 
+        ) const = 0;
+    };
+}
+
