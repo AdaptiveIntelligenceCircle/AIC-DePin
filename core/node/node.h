@@ -1,7 +1,7 @@
 #pragma once 
 #include "node_state.h"
 
-namespace aic :: node 
+namespace aic :: core :: node 
 {
     class Node
     {

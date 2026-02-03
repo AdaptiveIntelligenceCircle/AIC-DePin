@@ -1,6 +1,6 @@
 #include "node.h"
 
-using namespace aic :: node; 
+using namespace aic :: core::node; 
 
 Node :: Node() : current_state(NodeState :: INIT){}
 
