@@ -1,15 +1,18 @@
 #pragma once 
 #include <unordered_map>
 
-#include <string> 
-#include "command.h"
+#include <memory> 
+#include "../command/command.h"
 
-class CommandRegistry
+namespace aic :: cli
 {
-    public: 
-    void register_command(Command*); 
-    Command *find(const string &name); 
+    class CommandRegistry
+    {
+        public:
+        void registerCommand(shared_ptr<Command> cmd);
+        shared_ptr<Command> resolve(const string &name) const; 
 
-    private: 
-    unordered_map<string, Command*> commands; 
-}; 
+        private: 
+        unordered_map<string, shared_ptr<Command>> commands_;
+    }; 
+}

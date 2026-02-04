@@ -1,16 +1,21 @@
 #pragma once
 #include "command_registry.h"
+#include "registry/command_registry.h"
+using namespace std;
 
-using namespace std; 
-
-class CLI
+namespace aic ::cli
 {
-    public: 
-    CLI(); 
+    class CLIApp
+    {
+    public:
+        CLIApp() = default;
+        ~CLIApp() = default; 
+        
+        void run(int argc, char **argv);
+        // void execute_line(const string &line);
 
-    void run(); 
-    void execute_line(const string &line);
-
-    private: 
-    CommandRegistry registry; 
-}; 
+    private:
+        CommandRegistry registry_;
+        void RegisterCommand(); 
+    };
+}
