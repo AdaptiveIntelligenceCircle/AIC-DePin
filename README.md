@@ -12,18 +12,18 @@ Enhance decentralized infrastructure for AI.
 
 ## Phase 2: Core Architecture & Execution Layer
 
-### 1. Mục tiêu Phase 2
+### 1. Phase 2 Objectives
 
-Phase này chuyển AIC-DePIN từ **concept + repo structure** sang **hệ thống có thể chạy, mô phỏng và mở rộng**:
+This phase transforms AIC-DePIN from a **concept + repo structure** to a **runnable, simulated, and scalable system**:
 
-* Có node DePIN tối thiểu chạy được
-* Có cơ chế staking / trust / resource accounting
-* Có simulation trước khi deploy thực
-* Không phụ thuộc cloud / big infra
+* Minimum runnable DePIN node
+* Staking/trust/resource accounting mechanism
+* Simulation before actual deployment
+* Cloud/big infrastructure independence
 
 ---
 
-### 2. Kiến trúc tổng thể (Revised)
+### 2. Overall Architecture (Revised)
 
 ```
 AIC-DePIN/
@@ -72,10 +72,11 @@ AIC-DePIN/
 
 #### 3.1 Node Engine (`core/node_engine`)
 
-**Vai trò:** runtime của một DePIN node
+**Role:** of a DePIN node runtime
 
-* lifecycle: join → evaluate → serve → earn → decay
-* không phải miner, là **agent có trách nhiệm**
+* Lifecycle: join → evaluate → serve → earn → decay
+
+* Not a miner, but a **responsible agent**
 
 Files:
 
@@ -115,7 +116,7 @@ Trust update = Bayesian + decay + anomaly penalty
 
 #### 3.3 Resource Engine (`core/resource_engine`)
 
-Quản lý tài nguyên **thực**, không giả lập token
+Manage real resources, not simulated tokens.
 
 Resource abstraction:
 
@@ -136,13 +137,13 @@ Files:
 
 #### 4.1 Resource Types (`depin/resource_types`)
 
-Mỗi resource là plugin:
+Each resource is a plugin:
 
 * `compute_resource`
 * `storage_resource`
 * `relay_resource`
 
-Có thể thêm:
+Can add:
 
 * human attention
 * physical presence
@@ -151,7 +152,7 @@ Có thể thêm:
 
 #### 4.2 Staking (`depin/staking`)
 
-Stake không nhất thiết là token:
+Stake doesn't necessarily have to be a token:
 
 * reputation stake
 * time lock
@@ -166,7 +167,7 @@ Files:
 
 #### 4.3 Incentive (`depin/incentive`)
 
-Reward không chỉ là tiền:
+Rewards are more than just money:
 
 * increased priority
 * governance weight
@@ -192,7 +193,7 @@ Files:
 
 ### 5. Consensus (Lightweight)
 
-Không dùng PoW / PoS truyền thống.
+No traditional PoW/PoS is used.
 
 #### Reputation Quorum
 
@@ -210,7 +211,7 @@ Files:
 
 #### 6.1 Sandbox (`simulation/sandbox`)
 
-Chạy:
+Run:
 
 * fake nodes
 * fake tasks
@@ -223,7 +224,7 @@ Files:
 
 #### 6.2 Adversary (`simulation/adversary`)
 
-Mô phỏng:
+Simulate:
 
 * collusion
 * sybil
@@ -235,7 +236,7 @@ Mô phỏng:
 
 #### 7.1 Human Interface
 
-Cho phép:
+Allowed:
 
 * human approve task
 * dispute resolution
@@ -249,7 +250,7 @@ Cho phép:
 
 ---
 
-### 8. Nguyên tắc bất biến của AIC-DePIN
+### 8. The invariant principles of AIC-DePIN
 
 1. Trust > Token
 2. Behavior > Hashrate
@@ -277,5 +278,6 @@ Cho phép:
 
 ---
 
-> AIC-DePIN không nhằm thắng crypto market.
-> Nó nhằm tạo một lớp hạ tầng **không thể bị thao túng dễ dàng**.
+> AIC-DePIN is not aimed at winning the crypto market.
+
+> It aims to create an infrastructure that **cannot be easily manipulated**.
