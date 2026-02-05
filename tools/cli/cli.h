@@ -1,5 +1,5 @@
 #pragma once
-#include "command_registry.h"
+#include "registry/command_registry.h"
 #include "registry/command_registry.h"
 using namespace std;
 
