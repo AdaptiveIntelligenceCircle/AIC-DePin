@@ -1,13 +1,17 @@
-#pragma once 
-#include <string> 
+#pragma once
+#include <string>
 
-using namespace std; 
+using namespace std;
 
-class Scenario
+namespace aic ::sandbox
 {
-    public: 
-    virtual string name() const = 0; 
-    virtual void setup() = 0; 
-    virtual void step() = 0; 
-    virtual ~Scenario() = default; 
-}; 
+    class Scenario
+    {
+    public:
+        virtual string name() const = 0;
+        virtual void setup() = 0;
+        virtual void Executive_step() = 0;
+        virtual ~Scenario() = default;
+        virtual bool is_finished() const = 0; 
+    };
+}
