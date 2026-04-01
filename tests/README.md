@@ -64,7 +64,7 @@ tests/
 ---
 
 ## Run
-./aic_test_runner
+./tests/..
 
 --- 
 
