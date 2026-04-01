@@ -63,4 +63,11 @@ tests/
 
 ---
 
-If you'd like me to add more content to each subfolder or create templates for each test type, I can provide further assistance!
+## Run
+./aic_test_runner
+
+--- 
+
+## Philosophy
+If a decision cannot be replayed deterministically,
+it cannot be trusted.
